@@ -5,7 +5,7 @@ import { colors } from '../../constants';
 
 export const FormWrapper = styled.form`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-items: center;
   align-items: center;
   width: 50%;
@@ -13,6 +13,8 @@ export const FormWrapper = styled.form`
 
   @media (min-width: 700px) {
     border-radius: 5px;
+    width: 30%;
+    flex-direction: row;
   }
 `;
 
@@ -56,8 +58,6 @@ export const FormInput = styled(Input)`
   background-color: ${colors.white};
   color: ${({ color }) => color || colors.white};
   text-align: center;
-  margin: auto;
-  margin-top: 10px;
   align-self: center;
 
   :focus {

@@ -41,9 +41,10 @@ export const AngleDown = styled(AngleDownButton)`
 
 export const FormButton = styled(Button)`
   border: transparent;
+  min-width: 150px;
   color: ${({ color }) => color || colors.white};
   padding: 10px;
-  margin: auto;
+  margin: 15px;
   border-radius: 5px;
   font-size: 26px;
   background-color: ${colors.darkblue};
@@ -57,5 +58,8 @@ export const FormButton = styled(Button)`
     border: ${({ focusbordercolor }) =>
       focusbordercolor || `2px solid  ${colors.teal}`};
     color: ${({ focuscolor }) => focuscolor || colors.teal};
+  }
+
+  @media (min-width: 700px) {
   }
 `;

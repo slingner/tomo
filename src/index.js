@@ -4,11 +4,11 @@ import App from './App';
 import './index.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-  faTv,
-  faLayerGroup,
-  faCheckCircle,
+  faCreditCard,
+  faFileInvoiceDollar,
+  faMoneyBillWave,
 } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faTv, faLayerGroup, faCheckCircle);
+library.add(faCreditCard, faFileInvoiceDollar, faMoneyBillWave);
 
 ReactDOM.render(<App />, document.getElementById('root'));
