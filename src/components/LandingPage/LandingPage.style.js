@@ -25,8 +25,9 @@ export const LandingText = styled.p`
   color: ${colors.white};
   font-size: 25px;
   padding: 35px;
+  margin: auto;
 
-  @media (min-width: 600px) {
+  @media (min-width: 00px) {
   }
 `;
 
@@ -51,7 +52,7 @@ export const ContentHeader = styled.div`
 
 export const ContentSection = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   height: fit-content;
   color: ${colors.white};
@@ -60,8 +61,10 @@ export const ContentSection = styled.div`
   align-items: center;
   font-size: 20px;
   text-align: center;
+  padding: 100px;
 
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
+    flex-direction: row;
   }
 `;
 
