@@ -11,6 +11,16 @@ export const FormWrapper = styled.form`
   width: 50%;
   margin: auto;
 
+  .alert-appear {
+    opacity: 0;
+    transition: all 250ms linear;
+  }
+
+  .alert-exit {
+    opacity: 1;
+    transition: all 250ms linear;
+  }
+
   @media (min-width: 700px) {
     border-radius: 5px;
     width: 80%;

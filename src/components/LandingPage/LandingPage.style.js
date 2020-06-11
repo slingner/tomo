@@ -2,15 +2,30 @@ import styled from 'styled-components';
 import { colors } from '../../constants';
 import wallet from './assets/wallet.jpg';
 
+export const PageWrapper = styled.div`
+  text-align: center;
+  width: 100vw;
+  overflow-x: hidden;
+`;
+
+export const ColumnWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+`;
+
 export const ImageWrapper = styled.img`
   width: 100%;
   overflow: hidden;
   object-fit: cover;
-  height: 50%;
+  width: 100%;
 
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     min-width: 50%;
-
+    max-width: 50%;
     overflow: hidden;
     object-fit: cover;
   }
@@ -31,18 +46,17 @@ export const ImageWrapper2 = styled.img`
 `;
 
 export const RoundImageWrapper = styled.img`
-  max-width: 40%;
+  min-width: 180px;
+  max-width: 180px;
   border-radius: 50%;
+  -webkit-box-shadow: 4px 4px 5px -2px rgba(176, 176, 176, 1);
+  -moz-box-shadow: 4px 4px 5px -2px rgba(176, 176, 176, 1);
+  box-shadow: 4px 4px 5px -2px rgba(176, 176, 176, 1);
 
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
+    min-width: 200px;
     max-width: 200px;
   }
-`;
-
-export const PageWrapper = styled.div`
-  text-align: center;
-  width: 100vw;
-  overflow-x: hidden;
 `;
 
 export const ContentHeader = styled.div`
@@ -61,15 +75,15 @@ export const ContentHeader = styled.div`
 export const IconWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   color: ${colors.white};
   align-items: center;
   font-size: 20px;
   text-align: center;
-  padding: 40px;
 
   @media (min-width: 800px) {
     flex-direction: column;
-    padding: 100px;
+    height: 70vh;
   }
 `;
 
@@ -96,22 +110,21 @@ export const TestimonialSection = styled.div`
   justify-content: space-evenly;
   color: ${colors.black};
   align-items: center;
-  font-size: 20px;
+  font-size: 0.5em;
   text-align: center;
-  margin: auto;
+  margin: 20px;
 
-  @media (min-width: 800px) {
+  @media (min-width: 1200px) {
     flex-direction: row;
-    justify-content: space-evenly;
   }
 `;
 
 export const TestimonialWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 30px;
+  margin: 50px 50px;
 
   @media (min-width: 800px) {
     flex-direction: column;
@@ -126,13 +139,24 @@ export const TestimonialHeader = styled.h1`
 
   @media (min-width: 600px) {
     font-size: 45px;
-    padding-top: 80px;
+    padding-top: 20px;
+  }
+`;
+
+export const TestimonialText = styled.p`
+  text-align: center;
+  color: ${colors.darkblue};
+  font-size: 20px;
+  padding: 15px;
+
+  @media (min-width: 600px) {
+    font-size: 20px;
   }
 `;
 
 export const LandingHeader = styled.h1`
   text-align: center;
-  padding: 50px 10px 30px 10px;
+  padding: 10px;
   color: ${colors.white};
   font-size: 35px;
   width: 100vw;
@@ -153,8 +177,21 @@ export const LandingText = styled.p`
   padding: 30px;
 
   @media (min-width: 800px) {
-    padding: 35px;
+    padding: 45px;
     font-size: 25px;
+  }
+`;
+
+export const BoldText = styled.span`
+  text-align: center;
+  color: ${colors.white};
+  font-size: 28px;
+  padding: 10px;
+  font-weight: 900;
+
+  @media (min-width: 800px) {
+    font-size: 35px;
+    padding-top: 30px;
   }
 `;
 
@@ -162,11 +199,12 @@ export const LandingText2 = styled.p`
   text-align: center;
   color: ${colors.white};
   font-size: 20px;
-  padding: 30px;
+  padding: 10px;
   order: 1;
 
   @media (min-width: 800px) {
-    padding: 35px;
+    min-width: 50%;
+    max-width: 50%;
     font-size: 25px;
     order: 2;
   }

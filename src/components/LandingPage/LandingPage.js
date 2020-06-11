@@ -5,6 +5,7 @@ import {
   ContentHeader,
   LandingText,
   LandingText2,
+  BoldText,
   IconWrapper,
   ContentSection,
   ImageWrapper,
@@ -13,7 +14,10 @@ import {
   TestimonialSection,
   TestimonialWrapper,
   TestimonialHeader,
+  TestimonialText,
+  ColumnWrap,
 } from './LandingPage.style';
+import { CreditBounce, BillBounce, InvoiceBounce } from './icons';
 import cash from './assets/cash.jpg';
 import happy from './assets/happy.jpg';
 import balloon from './assets/balloon.jpg';
@@ -23,11 +27,12 @@ import girl2 from './assets/girl2.jpg';
 import { FormButton } from '../Button/Button';
 import { FormInput, FormWrapper } from '../Form/Form';
 import { colors } from '../../constants';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { CSSTransition } from 'react-transition-group';
 
 export default function LandingPage() {
   const [inputData, setInputData] = useState({ email: '' });
   const [emailData, setEmailData] = useState([]);
+  const [message, setMessage] = useState(false);
 
   function handleChange(e) {
     // update input data
@@ -45,6 +50,8 @@ export default function LandingPage() {
     e.preventDefault();
     setEmailData((prevEmails) => [...prevEmails, inputData]);
     setInputData({ email: '' });
+    setMessage(true);
+    setTimeout(() => setMessage(null), 3000);
   }
 
   const emails = emailData.map((emails, idx) => (
@@ -69,7 +76,18 @@ export default function LandingPage() {
             color={colors.darkgrey}
           />
           <FormButton type='submit'>Sign Up!</FormButton>
+
+          <CSSTransition
+            in={message}
+            timeout={100}
+            classNames='alert'
+            unmountOnExit
+            appear
+          >
+            <p style={{ color: 'white' }}>Success!</p>
+          </CSSTransition>
         </FormWrapper>
+
         <div
           style={{
             color: 'white',
@@ -92,48 +110,58 @@ export default function LandingPage() {
         }}
       >
         <IconWrapper>
-          <FontAwesomeIcon icon='credit-card' style={{ fontSize: '100px' }} />
+          <CreditBounce />
           <LandingText>No credit score? Np.</LandingText>
         </IconWrapper>
         <IconWrapper>
-          <FontAwesomeIcon
-            icon='file-invoice-dollar'
-            style={{ fontSize: '100px' }}
-          />
+          <InvoiceBounce />
           <LandingText>Never miss a payment.</LandingText>
         </IconWrapper>
         <IconWrapper>
-          <FontAwesomeIcon
-            icon='money-bill-wave'
-            style={{ fontSize: '100px' }}
-          />
-          <LandingText> Earn Cashback </LandingText>
+          <BillBounce />
+          <LandingText> Earn cashback.</LandingText>
         </IconWrapper>
       </ContentSection>
 
       <ContentSection style={{ backgroundColor: colors.darkblue }}>
+        {/* <ColumnWrap> */}
         <LandingText>
-          Build credit the smart way. Tomo is the first card to offer
-          specialized smart payments catered to credit building. Choose to pay
-          off your card weekly, bi-weekly or monthly.
+          <BoldText>Build credit the smart way. </BoldText>
+          <br />
+          <br />
+          Tomo is the first card to offer specialized smart payments catered to
+          credit building. Choose to pay off your card weekly, bi-weekly or
+          monthly.
         </LandingText>
+        {/* </ColumnWrap> */}
         <ImageWrapper alt='money' src={cash} />
       </ContentSection>
 
       <ContentSection style={{ backgroundColor: colors.lightpurple }}>
-        <LandingText2>
+        {/* <ColumnWrap> */}
+        <LandingText2 style={{ padding: '30px' }}>
           Not only do you automatically earn 1% cash back by default, but have
-          the ability to boost your cashback up to 20%. Yep, pretty amazing we
-          know.
+          the ability to boost your cashback up to 20%.
+          <br />
+          <br />
+          <BoldText>Yep, pretty amazing we know.</BoldText>
         </LandingText2>
+        {/* </ColumnWrap> */}
         <ImageWrapper2 alt='smiles' src={happy} />
       </ContentSection>
 
       <ContentSection style={{ backgroundColor: colors.darkblue }}>
+        {/* <ColumnWrap> */}
         <LandingText>
-          You work hard for your money and simply put, credit card fees suck.
+          You work hard for your money and simply put,
+          <br />
+          <br />
+          <BoldText>credit card fees suck.</BoldText>
+          <br />
+          <br />
           That’s why we got rid of them and don’t plan on having them, ever.
         </LandingText>
+        {/* </ColumnWrap> */}
         <ImageWrapper alt='money' src={balloon} />
       </ContentSection>
 
@@ -142,25 +170,26 @@ export default function LandingPage() {
       </TestimonialHeader>
       <TestimonialSection>
         <TestimonialWrapper>
-          <RoundImageWrapper alt='Portrait of man' src={guy} />
-          <LandingText style={{ color: colors.darkblue }}>
-            Margaret E. "This is fantastic! Thanks so much guys!"
-          </LandingText>
+          <RoundImageWrapper alt='Portrait of guy' src={guy} />
+          <BoldText style={{ color: 'black' }}>David W. </BoldText>
+          <TestimonialText style={{ color: colors.darkblue }}>
+            "This is fantastic! Thanks so much guys!"
+          </TestimonialText>
         </TestimonialWrapper>
 
         <TestimonialWrapper>
-          <RoundImageWrapper alt='Portrait of girl' src={guy2} />
-          <LandingText style={{ color: colors.darkblue }}>
-            Fred S. "Bootstrap is amazing. I've been using it to create lots of
-            super nice landing pages."
-          </LandingText>
+          <RoundImageWrapper alt='Portrait of another guy' src={guy2} />
+          <BoldText style={{ color: 'black' }}>Matt L. </BoldText>
+          <TestimonialText style={{ color: colors.darkblue }}>
+            "Tomo is amazing. I've been using it to build my credit."
+          </TestimonialText>
         </TestimonialWrapper>
         <TestimonialWrapper>
           <RoundImageWrapper alt='Portrait of girl' src={girl2} />
-          <LandingText style={{ color: colors.darkblue }}>
-            Sarah W. "Thanks so much for making these free resources available
-            to us!"
-          </LandingText>
+          <BoldText style={{ color: 'black' }}>Tammy T. </BoldText>
+          <TestimonialText style={{ color: colors.darkblue }}>
+            "Thanks so much for making these resources available to us!"
+          </TestimonialText>
         </TestimonialWrapper>
       </TestimonialSection>
     </PageWrapper>
