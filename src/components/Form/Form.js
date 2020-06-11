@@ -13,7 +13,8 @@ export const FormWrapper = styled.form`
 
   @media (min-width: 700px) {
     border-radius: 5px;
-    width: 30%;
+    width: 80%;
+    justify-content: center;
     flex-direction: row;
   }
 `;
@@ -54,7 +55,7 @@ export const FormInput = styled(Input)`
   border: none;
   border-radius: 5px;
   padding: 10px;
-  font-size: 26px;
+  font-size: 22px;
   background-color: ${colors.white};
   color: ${({ color }) => color || colors.white};
   text-align: center;
@@ -62,9 +63,11 @@ export const FormInput = styled(Input)`
 
   :focus {
     border: 2px solid
-      ${({ bordercolor }) => (bordercolor ? bordercolor : colors.darkblue)};
+      ${({ bordercolor }) => (bordercolor ? bordercolor : colors.lightpurple)};
   }
 
   @media (min-width: 700px) {
+    font-size: 26px;
+    min-width: 350px;
   }
 `;
