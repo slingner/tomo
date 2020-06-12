@@ -186,7 +186,7 @@ export const LandingHeader = styled.h1`
   }
 `;
 
-export const LandingText = styled.p`
+export const LandingText = styled.div`
   text-align: center;
   color: ${colors.white};
   font-size: 20px;
@@ -198,7 +198,7 @@ export const LandingText = styled.p`
   }
 `;
 
-export const LandingText2 = styled.p`
+export const LandingText2 = styled.div`
   text-align: center;
   color: ${colors.white};
   font-size: 20px;
@@ -214,7 +214,7 @@ export const LandingText2 = styled.p`
   }
 `;
 
-export const BoldText = styled.span`
+export const BoldText = styled.p`
   text-align: center;
   color: ${colors.white};
   font-size: 28px;
