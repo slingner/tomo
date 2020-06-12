@@ -85,7 +85,7 @@ export default function LandingPage() {
             color={colors.black}
           />
           <FormButton type='submit'>Sign Up!</FormButton>
-
+          {/* Timeout for successful email submission */}
           <CSSTransition
             in={message}
             timeout={100}
@@ -97,6 +97,7 @@ export default function LandingPage() {
           </CSSTransition>
         </FormWrapper>
 
+        {/* List of all submitted emails */}
         <div
           style={{
             color: 'white',

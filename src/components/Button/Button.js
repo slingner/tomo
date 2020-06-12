@@ -13,11 +13,11 @@ const fadeInAnimation = keyframes`${fadeIn}`;
 
 export const FormButton = styled(Button)`
   border: transparent;
-  min-width: 150px;
+  min-width: 200px;
   color: ${({ color }) => color || colors.white};
   padding: 10px;
   margin: 15px;
-  border-radius: 5px;
+  border-radius: 15px;
   font-size: 26px;
   background-color: ${colors.grey};
 
@@ -32,5 +32,6 @@ export const FormButton = styled(Button)`
   }
 
   @media (min-width: 700px) {
+    min-width: 150px;
   }
 `;
