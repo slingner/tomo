@@ -70,6 +70,7 @@ export const ContentHeader = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(50, 50, 50, 0.2);
+  overflow: hidden;
 
   @media (min-width: 600px) {
     height: 100vh;
