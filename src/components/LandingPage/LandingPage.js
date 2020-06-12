@@ -19,7 +19,7 @@ import {
 import { CreditBounce, BillBounce, InvoiceBounce } from './icons';
 import cash from './assets/cash.jpg';
 import happy from './assets/happy.jpg';
-import balloon from './assets/balloon.jpg';
+import computer from './assets/computer.jpg';
 import guy from './assets/guy.jpg';
 import guy2 from './assets/guy2.jpg';
 import girl2 from './assets/girl2.jpg';
@@ -117,6 +117,7 @@ export default function LandingPage() {
       <ContentSection
         style={{
           backgroundColor: colors.burntOrange,
+          justifyContent: 'center',
         }}
       >
         <IconWrapper>
@@ -147,7 +148,7 @@ export default function LandingPage() {
       </ContentSection>
 
       <ContentSection style={{ backgroundColor: colors.purpleGrey }}>
-        <LandingText2 style={{ padding: '30px' }}>
+        <LandingText2>
           Not only do you automatically earn 1% cash back by default, but have
           the ability to boost your cashback up to 20%.
           <br />
@@ -169,7 +170,7 @@ export default function LandingPage() {
           That’s why we got rid of them and don’t plan on having them, ever.
         </LandingText>
 
-        <ImageWrapper alt='money' src={balloon} />
+        <ImageWrapper alt='computer' src={computer} />
       </ContentSection>
 
       <TestimonialHeader style={{ color: 'black' }}>

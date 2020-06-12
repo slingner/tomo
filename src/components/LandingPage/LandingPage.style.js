@@ -80,17 +80,18 @@ export const IconWrapper = styled.div`
   align-items: center;
   font-size: 20px;
   text-align: center;
-
+  padding-left: 40px;
   @media (min-width: 800px) {
     flex-direction: column;
     height: 70vh;
+    padding: 30px;
   }
 `;
 
 export const ContentSection = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: fit-content;
   color: ${colors.white};
   background-color: ${colors.blue};
@@ -173,7 +174,7 @@ export const LandingText = styled.p`
   text-align: center;
   color: ${colors.white};
   font-size: 20px;
-  padding: 30px;
+  padding: 80px;
 
   @media (min-width: 800px) {
     padding: 45px;
@@ -185,7 +186,7 @@ export const LandingText2 = styled.p`
   text-align: center;
   color: ${colors.white};
   font-size: 20px;
-  padding: 10px;
+  padding: 80px;
   order: 1;
 
   @media (min-width: 800px) {
