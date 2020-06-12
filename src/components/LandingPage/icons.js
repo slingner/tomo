@@ -25,7 +25,7 @@ export const CreditBounce = styled(Credit)`
     animation: 1s ${bounceAnimation};
   }
   @media (min-width: 800px) {
-    font-size: 120px;
+    font-size: 80px;
   }
 `;
 
@@ -48,7 +48,7 @@ export const InvoiceBounce = styled(Invoice)`
   }
 
   @media (min-width: 800px) {
-    font-size: 120px;
+    font-size: 80px;
   }
 `;
 
@@ -71,6 +71,6 @@ export const BillBounce = styled(Bill)`
   }
 
   @media (min-width: 800px) {
-    font-size: 120px;
+    font-size: 80px;
   }
 `;

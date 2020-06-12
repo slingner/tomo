@@ -83,7 +83,7 @@ export const IconWrapper = styled.div`
   padding-left: 40px;
   @media (min-width: 800px) {
     flex-direction: column;
-    height: 70vh;
+    height: 55vh;
     padding: 30px;
   }
 `;
