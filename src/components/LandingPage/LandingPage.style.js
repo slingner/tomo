@@ -93,8 +93,7 @@ export const ContentSection = styled.div`
   justify-content: space-around;
   height: fit-content;
   color: ${colors.white};
-  background-color: ${(props) =>
-    props.color ? props.color : colors.slategrey};
+  background-color: ${colors.grey};
   align-items: center;
   font-size: 20px;
   text-align: center;
@@ -145,7 +144,7 @@ export const TestimonialHeader = styled.h1`
 
 export const TestimonialText = styled.p`
   text-align: center;
-  color: ${colors.darkblue};
+  color: ${colors.grey};
   font-size: 20px;
   padding: 15px;
 
@@ -182,19 +181,6 @@ export const LandingText = styled.p`
   }
 `;
 
-export const BoldText = styled.span`
-  text-align: center;
-  color: ${colors.white};
-  font-size: 28px;
-  padding: 10px;
-  font-weight: 900;
-
-  @media (min-width: 800px) {
-    font-size: 35px;
-    padding-top: 30px;
-  }
-`;
-
 export const LandingText2 = styled.p`
   text-align: center;
   color: ${colors.white};
@@ -207,5 +193,18 @@ export const LandingText2 = styled.p`
     max-width: 50%;
     font-size: 25px;
     order: 2;
+  }
+`;
+
+export const BoldText = styled.span`
+  text-align: center;
+  color: ${colors.white};
+  font-size: 28px;
+  padding: 10px;
+  font-weight: 900;
+
+  @media (min-width: 800px) {
+    font-size: 35px;
+    padding-top: 30px;
   }
 `;

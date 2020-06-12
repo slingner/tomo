@@ -15,7 +15,6 @@ import {
   TestimonialWrapper,
   TestimonialHeader,
   TestimonialText,
-  ColumnWrap,
 } from './LandingPage.style';
 import { CreditBounce, BillBounce, InvoiceBounce } from './icons';
 import cash from './assets/cash.jpg';
@@ -30,12 +29,15 @@ import { colors } from '../../constants';
 import { CSSTransition } from 'react-transition-group';
 
 export default function LandingPage() {
+  //the object in state that holds the input text for the current email submission
   const [inputData, setInputData] = useState({ email: '' });
+  //the array in state holding all submitted emails
   const [emailData, setEmailData] = useState([]);
+  //state status of email submit success
   const [message, setMessage] = useState(false);
 
+  //this sets the current inputData from the email input into state
   function handleChange(e) {
-    // update input data
     const { name, value } = e.target;
     setInputData((prevInputData) => {
       return {
@@ -46,14 +48,21 @@ export default function LandingPage() {
   }
 
   function handleSubmit(e) {
-    // add the input data to the emailData array
     e.preventDefault();
+    //takes all previous emails and adds the newest one to the array
     setEmailData((prevEmails) => [...prevEmails, inputData]);
+
+    //reset the input field
     setInputData({ email: '' });
+
+    //switches the display message to true
     setMessage(true);
+
+    //and this sets a timeout on the message to disapper after 3 seconds
     setTimeout(() => setMessage(null), 3000);
   }
 
+  //this maps through the array of all submitted emails and when called will render the list
   const emails = emailData.map((emails, idx) => (
     <p key={idx}> {emails.email}</p>
   ));
@@ -73,7 +82,7 @@ export default function LandingPage() {
             type='email'
             name='email'
             required
-            color={colors.darkgrey}
+            color={colors.black}
           />
           <FormButton type='submit'>Sign Up!</FormButton>
 
@@ -106,7 +115,7 @@ export default function LandingPage() {
 
       <ContentSection
         style={{
-          backgroundColor: colors.darkpurple,
+          backgroundColor: colors.burntOrange,
         }}
       >
         <IconWrapper>
@@ -123,8 +132,7 @@ export default function LandingPage() {
         </IconWrapper>
       </ContentSection>
 
-      <ContentSection style={{ backgroundColor: colors.darkblue }}>
-        {/* <ColumnWrap> */}
+      <ContentSection style={{ backgroundColor: colors.sunset }}>
         <LandingText>
           <BoldText>Build credit the smart way. </BoldText>
           <br />
@@ -133,12 +141,11 @@ export default function LandingPage() {
           credit building. Choose to pay off your card weekly, bi-weekly or
           monthly.
         </LandingText>
-        {/* </ColumnWrap> */}
+
         <ImageWrapper alt='money' src={cash} />
       </ContentSection>
 
-      <ContentSection style={{ backgroundColor: colors.lightpurple }}>
-        {/* <ColumnWrap> */}
+      <ContentSection style={{ backgroundColor: colors.lightyellow }}>
         <LandingText2 style={{ padding: '30px' }}>
           Not only do you automatically earn 1% cash back by default, but have
           the ability to boost your cashback up to 20%.
@@ -146,12 +153,11 @@ export default function LandingPage() {
           <br />
           <BoldText>Yep, pretty amazing we know.</BoldText>
         </LandingText2>
-        {/* </ColumnWrap> */}
+
         <ImageWrapper2 alt='smiles' src={happy} />
       </ContentSection>
 
-      <ContentSection style={{ backgroundColor: colors.darkblue }}>
-        {/* <ColumnWrap> */}
+      <ContentSection>
         <LandingText>
           You work hard for your money and simply put,
           <br />
@@ -161,7 +167,7 @@ export default function LandingPage() {
           <br />
           That’s why we got rid of them and don’t plan on having them, ever.
         </LandingText>
-        {/* </ColumnWrap> */}
+
         <ImageWrapper alt='money' src={balloon} />
       </ContentSection>
 
@@ -172,7 +178,7 @@ export default function LandingPage() {
         <TestimonialWrapper>
           <RoundImageWrapper alt='Portrait of guy' src={guy} />
           <BoldText style={{ color: 'black' }}>David W. </BoldText>
-          <TestimonialText style={{ color: colors.darkblue }}>
+          <TestimonialText style={{ color: colors.grey }}>
             "This is fantastic! Thanks so much guys!"
           </TestimonialText>
         </TestimonialWrapper>
@@ -180,14 +186,14 @@ export default function LandingPage() {
         <TestimonialWrapper>
           <RoundImageWrapper alt='Portrait of another guy' src={guy2} />
           <BoldText style={{ color: 'black' }}>Matt L. </BoldText>
-          <TestimonialText style={{ color: colors.darkblue }}>
+          <TestimonialText style={{ color: colors.grey }}>
             "Tomo is amazing. I've been using it to build my credit."
           </TestimonialText>
         </TestimonialWrapper>
         <TestimonialWrapper>
           <RoundImageWrapper alt='Portrait of girl' src={girl2} />
           <BoldText style={{ color: 'black' }}>Tammy T. </BoldText>
-          <TestimonialText style={{ color: colors.darkblue }}>
+          <TestimonialText style={{ color: colors.grey }}>
             "Thanks so much for making these resources available to us!"
           </TestimonialText>
         </TestimonialWrapper>

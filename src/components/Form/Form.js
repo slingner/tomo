@@ -29,27 +29,6 @@ export const FormWrapper = styled.form`
   }
 `;
 
-function Label({ className, ...props }) {
-  return <label className={cx('Label', className)} {...props} />;
-}
-
-export const FormLabel = styled(Label)`
-  color: ${(props) => (props.color ? props.color : colors.darkgrey)};
-  text-align: ${(props) => (props.align ? props.align : 'left')};
-  font-size: ${({ fontSize }) => (fontSize ? fontSize : 'auto')};
-  padding: 10px 10px 10px 0px;
-  margin: 10px auto 0px auto;
-  font-weight: bolder;
-  width: 80%;
-  min-height: 100%;
-
-  @media (min-width: 700px) {
-    width: 60%;
-    margin: auto;
-    margin-top: 20px;
-  }
-`;
-
 export const Input = React.forwardRef(({ className, ...props }, ref) => {
   return (
     <input
@@ -73,7 +52,7 @@ export const FormInput = styled(Input)`
 
   :focus {
     border: 2px solid
-      ${({ bordercolor }) => (bordercolor ? bordercolor : colors.lightpurple)};
+      ${({ bordercolor }) => (bordercolor ? bordercolor : colors.lightyellow)};
   }
 
   @media (min-width: 700px) {

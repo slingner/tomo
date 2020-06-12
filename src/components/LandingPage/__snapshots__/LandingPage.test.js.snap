@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LandingPage /> renders LandingPage by default 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.h1>
+      Start with no credit. 
+      <br />
+      Build amazing credit.
+    </styled.h1>
+    <styled.form
+      onSubmit={[Function]}
+    >
+      <Styled(Component)
+        color="#424B54"
+        name="email"
+        onChange={[Function]}
+        placeholder="Enter Your Email..."
+        required={true}
+        type="email"
+        value=""
+      />
+      <Styled(Component)
+        type="submit"
+      >
+        Sign Up!
+      </Styled(Component)>
+      <CSSTransition
+        appear={true}
+        classNames="alert"
+        in={false}
+        timeout={100}
+        unmountOnExit={true}
+      >
+        <p
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Success!
+        </p>
+      </CSSTransition>
+    </styled.form>
+    <div
+      style={
+        Object {
+          "borderRadius": "5px",
+          "color": "white",
+          "fontSize": "22px",
+          "margin": "auto",
+          "maxHeight": "200px",
+          "maxWidth": "300px",
+          "minHeight": "150px",
+          "overflow": "auto",
+        }
+      }
+    >
+      All emails: 
+       
+    </div>
+  </styled.div>
+  <styled.div
+    style={
+      Object {
+        "backgroundColor": "#032CA6",
+      }
+    }
+  >
+    <styled.div>
+      <Styled(Component) />
+      <styled.p>
+        No credit score? Np.
+      </styled.p>
+    </styled.div>
+    <styled.div>
+      <Styled(Component) />
+      <styled.p>
+        Never miss a payment.
+      </styled.p>
+    </styled.div>
+    <styled.div>
+      <Styled(Component) />
+      <styled.p>
+         Earn cashback.
+      </styled.p>
+    </styled.div>
+  </styled.div>
+  <styled.div
+    style={
+      Object {
+        "backgroundColor": "##F25CA2",
+      }
+    }
+  >
+    <styled.p>
+      <styled.span>
+        Build credit the smart way. 
+      </styled.span>
+      <br />
+      <br />
+      Tomo is the first card to offer specialized smart payments catered to credit building. Choose to pay off your card weekly, bi-weekly or monthly.
+    </styled.p>
+    <styled.img
+      alt="money"
+      src="cash.jpg"
+    />
+  </styled.div>
+  <styled.div
+    style={
+      Object {
+        "backgroundColor": "#0433BF",
+      }
+    }
+  >
+    <styled.p
+      style={
+        Object {
+          "padding": "30px",
+        }
+      }
+    >
+      Not only do you automatically earn 1% cash back by default, but have the ability to boost your cashback up to 20%.
+      <br />
+      <br />
+      <styled.span>
+        Yep, pretty amazing we know.
+      </styled.span>
+    </styled.p>
+    <styled.img
+      alt="smiles"
+      src="happy.jpg"
+    />
+  </styled.div>
+  <styled.div
+    style={
+      Object {
+        "backgroundColor": "#021859",
+      }
+    }
+  >
+    <styled.p>
+      You work hard for your money and simply put,
+      <br />
+      <br />
+      <styled.span>
+        credit card fees suck.
+      </styled.span>
+      <br />
+      <br />
+      That’s why we got rid of them and don’t plan on having them, ever.
+    </styled.p>
+    <styled.img
+      alt="money"
+      src="balloon.jpg"
+    />
+  </styled.div>
+  <styled.h1
+    style={
+      Object {
+        "color": "black",
+      }
+    }
+  >
+    What people are saying...
+  </styled.h1>
+  <styled.div>
+    <styled.div>
+      <styled.img
+        alt="Portrait of guy"
+        src="guy.jpg"
+      />
+      <styled.span
+        style={
+          Object {
+            "color": "black",
+          }
+        }
+      >
+        David W. 
+      </styled.span>
+      <styled.p
+        style={
+          Object {
+            "color": "#021859",
+          }
+        }
+      >
+        "This is fantastic! Thanks so much guys!"
+      </styled.p>
+    </styled.div>
+    <styled.div>
+      <styled.img
+        alt="Portrait of another guy"
+        src="guy2.jpg"
+      />
+      <styled.span
+        style={
+          Object {
+            "color": "black",
+          }
+        }
+      >
+        Matt L. 
+      </styled.span>
+      <styled.p
+        style={
+          Object {
+            "color": "#021859",
+          }
+        }
+      >
+        "Tomo is amazing. I've been using it to build my credit."
+      </styled.p>
+    </styled.div>
+    <styled.div>
+      <styled.img
+        alt="Portrait of girl"
+        src="girl2.jpg"
+      />
+      <styled.span
+        style={
+          Object {
+            "color": "black",
+          }
+        }
+      >
+        Tammy T. 
+      </styled.span>
+      <styled.p
+        style={
+          Object {
+            "color": "#021859",
+          }
+        }
+      >
+        "Thanks so much for making these resources available to us!"
+      </styled.p>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

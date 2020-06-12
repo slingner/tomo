@@ -19,7 +19,7 @@ export const FormButton = styled(Button)`
   margin: 15px;
   border-radius: 5px;
   font-size: 26px;
-  background-color: ${colors.darkblue};
+  background-color: ${colors.grey};
 
   :hover {
     animation: 0.5s ${fadeInAnimation};
