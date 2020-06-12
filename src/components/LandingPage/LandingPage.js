@@ -15,6 +15,7 @@ import {
   TestimonialWrapper,
   TestimonialHeader,
   TestimonialText,
+  IconSection,
 } from './LandingPage.style';
 import { CreditBounce, BillBounce, InvoiceBounce } from './icons';
 import cash from './assets/cash.jpg';
@@ -114,25 +115,34 @@ export default function LandingPage() {
         </div>
       </ContentHeader>
 
-      <ContentSection
+      <IconSection
         style={{
           backgroundColor: colors.burntOrange,
-          justifyContent: 'center',
         }}
       >
         <IconWrapper>
           <CreditBounce />
-          <LandingText>No credit score? Np.</LandingText>
+          <BoldText>No credit score? Np.</BoldText>
+          <LandingText style={{ padding: '0' }}>
+            Whether you have a credit score or not, anyone is eligible to apply.
+            Get approved today and we’ll ship your card the same day!
+          </LandingText>
         </IconWrapper>
         <IconWrapper>
           <InvoiceBounce />
-          <LandingText>Never miss a payment.</LandingText>
+          <BoldText>Never miss a payment.</BoldText>
+          <LandingText style={{ padding: '0' }}>
+            Relax and watch your credit score grow.
+          </LandingText>
         </IconWrapper>
         <IconWrapper>
           <BillBounce />
-          <LandingText> Earn cashback.</LandingText>
+          <BoldText>Earn cashback.</BoldText>
+          <LandingText style={{ padding: '0' }}>
+            Rewards that will put a smile on your face.
+          </LandingText>
         </IconWrapper>
-      </ContentSection>
+      </IconSection>
 
       <ContentSection style={{ backgroundColor: colors.sunset }}>
         <LandingText>

@@ -18,32 +18,52 @@ export const ColumnWrap = styled.div`
 `;
 
 export const ImageWrapper = styled.img`
-  width: 100%;
   overflow: hidden;
   object-fit: cover;
   width: 100%;
+  height: 100%;
 
   @media (min-width: 800px) {
     min-width: 50%;
     max-width: 50%;
-    overflow: hidden;
-    object-fit: cover;
+    flex: 1;
+    height: 100%;
+    width: auto;
   }
 `;
 
 export const ImageWrapper2 = styled.img`
-  width: 100%;
   overflow: hidden;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
   order: 2;
 
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     min-width: 50%;
-    overflow: hidden;
-    object-fit: cover;
+    max-width: 50%;
+    flex: 1;
+    height: 100%;
+    width: auto;
     order: 1;
   }
 `;
+
+// export const ImageWrapper2 = styled.img`
+//   overflow: hidden;
+//   object-fit: cover;
+//   width: 100%;
+//   height: 100%;
+//   order: 2;
+
+//   @media (min-width: 800px) {
+//     order: 1;
+//     min-width: 50%;
+//     max-width: 50%;
+//     height: 100%;
+//     object-fit: contain;
+//   }
+// `;
 
 export const RoundImageWrapper = styled.img`
   min-width: 180px;
@@ -72,19 +92,33 @@ export const ContentHeader = styled.div`
   }
 `;
 
-export const IconWrapper = styled.div`
+export const IconSection = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  @media (min-width: 800px) {
+    flex-direction: row;
+    height: fit-content;
+    /* padding: 30px; */
+  }
+`;
+
+export const IconWrapper = styled.div`
   color: ${colors.white};
   align-items: center;
   font-size: 20px;
   text-align: center;
-  padding-left: 40px;
+  max-width: 60%;
+  padding: 50px;
+
   @media (min-width: 800px) {
+    max-width: 33%;
     flex-direction: column;
-    height: 55vh;
-    padding: 30px;
+    /* height: 55vh; */
+    /* padding: 30px; */
   }
 `;
 
@@ -92,12 +126,13 @@ export const ContentSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: fit-content;
   color: ${colors.white};
   background-color: ${colors.blue};
   align-items: center;
   font-size: 20px;
   text-align: center;
+  overflow: hidden;
+  height: 100%;
 
   @media (min-width: 800px) {
     flex-direction: row;
@@ -194,6 +229,7 @@ export const LandingText2 = styled.p`
     max-width: 50%;
     font-size: 25px;
     order: 2;
+    padding: 45px;
   }
 `;
 
@@ -205,7 +241,7 @@ export const BoldText = styled.span`
   font-weight: 900;
 
   @media (min-width: 800px) {
-    font-size: 35px;
+    font-size: 30px;
     padding-top: 30px;
   }
 `;
