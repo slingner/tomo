@@ -49,22 +49,6 @@ export const ImageWrapper2 = styled.img`
   }
 `;
 
-// export const ImageWrapper2 = styled.img`
-//   overflow: hidden;
-//   object-fit: cover;
-//   width: 100%;
-//   height: 100%;
-//   order: 2;
-
-//   @media (min-width: 800px) {
-//     order: 1;
-//     min-width: 50%;
-//     max-width: 50%;
-//     height: 100%;
-//     object-fit: contain;
-//   }
-// `;
-
 export const RoundImageWrapper = styled.img`
   min-width: 180px;
   max-width: 180px;
@@ -102,7 +86,6 @@ export const IconSection = styled.div`
   @media (min-width: 800px) {
     flex-direction: row;
     height: fit-content;
-    /* padding: 30px; */
   }
 `;
 
@@ -117,8 +100,6 @@ export const IconWrapper = styled.div`
   @media (min-width: 800px) {
     max-width: 33%;
     flex-direction: column;
-    /* height: 55vh; */
-    /* padding: 30px; */
   }
 `;
 
