@@ -52,7 +52,7 @@ export const FormInput = styled(Input)`
 
   :focus {
     border: 2px solid
-      ${({ bordercolor }) => (bordercolor ? bordercolor : colors.lightyellow)};
+      ${({ bordercolor }) => (bordercolor ? bordercolor : colors.blue)};
   }
 
   @media (min-width: 700px) {

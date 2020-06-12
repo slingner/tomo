@@ -93,7 +93,7 @@ export const ContentSection = styled.div`
   justify-content: space-around;
   height: fit-content;
   color: ${colors.white};
-  background-color: ${colors.grey};
+  background-color: ${colors.blue};
   align-items: center;
   font-size: 20px;
   text-align: center;

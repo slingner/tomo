@@ -146,7 +146,7 @@ export default function LandingPage() {
         <ImageWrapper alt='money' src={cash} />
       </ContentSection>
 
-      <ContentSection style={{ backgroundColor: colors.lightyellow }}>
+      <ContentSection style={{ backgroundColor: colors.purpleGrey }}>
         <LandingText2 style={{ padding: '30px' }}>
           Not only do you automatically earn 1% cash back by default, but have
           the ability to boost your cashback up to 20%.
