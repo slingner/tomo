@@ -12,7 +12,7 @@ exports[`<LandingPage /> renders LandingPage by default 1`] = `
       onSubmit={[Function]}
     >
       <Styled(Component)
-        color="#424B54"
+        color="#0D0D0D"
         name="email"
         onChange={[Function]}
         placeholder="Enter Your Email..."
@@ -64,7 +64,7 @@ exports[`<LandingPage /> renders LandingPage by default 1`] = `
   <styled.div
     style={
       Object {
-        "backgroundColor": "#032CA6",
+        "backgroundColor": "#BF5A1F",
       }
     }
   >
@@ -90,7 +90,7 @@ exports[`<LandingPage /> renders LandingPage by default 1`] = `
   <styled.div
     style={
       Object {
-        "backgroundColor": "##F25CA2",
+        "backgroundColor": "#F2A03D",
       }
     }
   >
@@ -110,7 +110,7 @@ exports[`<LandingPage /> renders LandingPage by default 1`] = `
   <styled.div
     style={
       Object {
-        "backgroundColor": "#0433BF",
+        "backgroundColor": "#F2CC85",
       }
     }
   >
@@ -133,13 +133,7 @@ exports[`<LandingPage /> renders LandingPage by default 1`] = `
       src="happy.jpg"
     />
   </styled.div>
-  <styled.div
-    style={
-      Object {
-        "backgroundColor": "#021859",
-      }
-    }
-  >
+  <styled.div>
     <styled.p>
       You work hard for your money and simply put,
       <br />
@@ -183,7 +177,7 @@ exports[`<LandingPage /> renders LandingPage by default 1`] = `
       <styled.p
         style={
           Object {
-            "color": "#021859",
+            "color": "#404040",
           }
         }
       >
@@ -207,7 +201,7 @@ exports[`<LandingPage /> renders LandingPage by default 1`] = `
       <styled.p
         style={
           Object {
-            "color": "#021859",
+            "color": "#404040",
           }
         }
       >
@@ -231,7 +225,7 @@ exports[`<LandingPage /> renders LandingPage by default 1`] = `
       <styled.p
         style={
           Object {
-            "color": "#021859",
+            "color": "#404040",
           }
         }
       >
